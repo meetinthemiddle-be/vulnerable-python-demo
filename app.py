@@ -25,11 +25,11 @@ def loginform():
 @app.route('/authenticate/', methods=['POST'])
 def verify_password():
 
-    the_password = "R5$s9*!k_959h2wvligw40*-+27Q4"
+    super_secret_password = "R5$s9*!k_959h2wvligw40*-+27Q4"
 
     html_response = "<h1>Checking login for " + request.form["user_name"] + "</h1>"
 
-    if(request.form["user_password"] != the_password):
+    if(request.form["user_password"] != super_secret_password):
         html_response+="Wrong password"
     else:
         html_response+="Correct password"
